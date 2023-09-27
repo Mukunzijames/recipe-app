@@ -55,7 +55,18 @@ onChange={event => setQuery(event.target.value)}
 isLoading={isLoading}
 
 />
-
+<div className="inline  ">
+  <nav>
+    <ul >
+      <li >HOME</li>
+      <li>PAGES</li>
+      <li>RECIPES</li>
+      <li>BLOG</li>
+      <li>SHOP</li>
+      <li>LANDING</li>
+      </ul>
+      </nav>
+</div>
 
   <h1 className="text-center pl-10 text-3xl italic font-serif  text-red-300 pt-7 ">Start using your kitchen</h1>
   <div className="recipes flex flex-wrap justify-center mt-5 ">
@@ -66,9 +77,7 @@ isLoading={isLoading}
           recipe={recipe}
         />
       ))
-    ) : (
-      "No meals!"
-    )}
+    ) : ( "No meals!"  )}
   </div>
   
 </div>
