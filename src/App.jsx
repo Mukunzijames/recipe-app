@@ -42,7 +42,12 @@ const handleSubmit  = event =>{
 }
   
   return (
+
+    <>
+    
     <div className="container bg-white  border-2 m-8 ">
+      
+      
 <searchRecipes
 handleSubmit={handleSubmit}
 value={query}
@@ -65,8 +70,9 @@ isLoading={isLoading}
       "No meals!"
     )}
   </div>
+  
 </div>
-
+</>
   );
 }
 
