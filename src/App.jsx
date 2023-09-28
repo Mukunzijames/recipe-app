@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Blog from "./pages/Blog";
+import Home from "./pages/Home";
+import Pages from "./pages/Pages";
+import Recipes from "./pages/Recipes";
+import Shop from "./pages/Shop";
+import Landing from "./pages/Landing";
 import React from "react";
 
 import RecipeCard from "./component/RecipeCard";
 import searchRecipes from "./component/searchRecipes"
-
 
 
 
@@ -79,6 +85,20 @@ isLoading={isLoading}
     ) : ( "No meals!"  )}
   </div>
   
+
+
+  <BrowserRouter>
+  <Routes>
+    <Route index element={<Home/>}/>
+    <Route path="/home" element={<Home/>}/>
+    <Route path="/blog" element={<Blog/>}/>
+    <Route path="/landing" element={<Landing/>}/>
+    <Route path="/pages" element={<Pages/>}/>
+    <Route path="/recipes" element={<Recipes/>}/>
+    <Route path="/shop" element={<Shop/>}/>
+  </Routes>
+  
+  </BrowserRouter>
 </div>
 </>
   );
