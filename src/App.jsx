@@ -45,7 +45,7 @@ const handleSubmit  = event =>{
 
     <>
     
-    <div className="container bg-white  border-2 m-8 ">
+    <div className="container bg-white cursor-pointer ">
       
       
 <searchRecipes
@@ -55,18 +55,17 @@ onChange={event => setQuery(event.target.value)}
 isLoading={isLoading}
 
 />
-<div className="inline  ">
-  <nav>
-    <ul >
-      <li >HOME</li>
-      <li>PAGES</li>
-      <li>RECIPES</li>
-      <li>BLOG</li>
-      <li>SHOP</li>
-      <li>LANDING</li>
-      </ul>
+
+  <nav className="flex justify-evenly m-2 ">
+      <div className="non-italic cursor-pointer md:hover:bg-red-300 text-lg font-medium">Home</div>
+      <div className="non-italic cursor-pointer  md:hover:bg-red-300 text-lg font-medium">Pages</div>
+      <div className="non-italic cursor-pointer  md:hover:bg-red-300 text-lg font-medium">Recipes</div>
+      <div className="non-italic cursor-pointer  md:hover:bg-red-300 text-lg font-medium">Blog</div>
+      <div className="non-italic cursor-pointer  md:hover:bg-red-300 text-lg font-medium">Shop</div>
+      <div className="non-italic cursor-pointer  md:hover:bg-red-300 text-lg font-medium">Landing</div>
+    
       </nav>
-</div>
+
 
   <h1 className="text-center pl-10 text-3xl italic font-serif  text-red-300 pt-7 ">Start using your kitchen</h1>
   <div className="recipes flex flex-wrap justify-center mt-5 ">
