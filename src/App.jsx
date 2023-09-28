@@ -7,6 +7,7 @@ import Recipes from "./pages/Recipes";
 import Shop from "./pages/Shop";
 import Landing from "./pages/Landing";
 import React from "react";
+import navBar from "./component/navBar";
 
 import RecipeCard from "./component/RecipeCard";
 import searchRecipes from "./component/searchRecipes"
@@ -61,8 +62,8 @@ onChange={event => setQuery(event.target.value)}
 isLoading={isLoading}
 
 />
-
-  <nav className="flex justify-evenly m-2 ">
+<navBar/>
+  <div className="flex justify-evenly m-2 ">
       <div className="non-italic cursor-pointer md:hover:bg-red-300 text-lg font-medium">Home</div>
       <div className="non-italic cursor-pointer  md:hover:bg-red-300 text-lg font-medium">Pages</div>
       <div className="non-italic cursor-pointer  md:hover:bg-red-300 text-lg font-medium">Recipes</div>
@@ -70,7 +71,9 @@ isLoading={isLoading}
       <div className="non-italic cursor-pointer  md:hover:bg-red-300 text-lg font-medium">Shop</div>
       <div className="non-italic cursor-pointer  md:hover:bg-red-300 text-lg font-medium">Landing</div>
     
-      </nav>
+      </div> 
+      
+      
 
 
   <h1 className="text-center pl-10 text-3xl italic font-serif  text-red-300 pt-7 ">Start using your kitchen</h1>
@@ -84,10 +87,9 @@ isLoading={isLoading}
       ))
     ) : ( "No meals!"  )}
   </div>
-  
-
 
   <BrowserRouter>
+  
   <Routes>
     <Route index element={<Home/>}/>
     <Route path="/home" element={<Home/>}/>
